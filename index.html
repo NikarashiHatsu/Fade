@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Just a fade-of</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+	<div class="faded">
+		<div class="front">Text 1</div>
+		<div class="back">Text 2</div>
+	</div>
+	<button id="animate" style="margin-top: 2rem;">Animate!</button>
+	<script type="text/javascript">
+		$().ready(function() {
+			$("#animate").click(function() {
+				$(".front").animate({
+					opacity: 0,
+				}, 1000, function() {
+					$(".back").animate({
+						opacity: 1,
+					}, 1000)
+				})
+			})
+		})
+	</script>
+</body>
+</html>
